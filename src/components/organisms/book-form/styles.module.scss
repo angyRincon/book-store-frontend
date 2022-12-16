@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  box-shadow: 4px 4px 10px var(--medium-shadow);
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  min-height: 300px;
+
+  .title {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.cardBody {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}

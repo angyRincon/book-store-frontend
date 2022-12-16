@@ -1,0 +1,49 @@
+.containerList {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: var(--white);
+  box-shadow: 4px 4px 10px var(--medium-shadow);
+  padding: 30px;
+  width: 500px;
+  height: 300px;
+  border-radius: 8px;
+  overflow: auto;
+
+  .listItem {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    list-style: none;
+    background: var(--white);
+    box-shadow: 2px 3px 10px var(--light-shadow);
+    width: 100%;
+    padding: 20px;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: ease .1s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+    }
+
+    .title {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+.addButton {
+  transform: translate(220px, -20px);
+}
+

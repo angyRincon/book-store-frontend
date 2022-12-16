@@ -1,0 +1,35 @@
+.iconButton {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: ease .1s;
+  background: var(--white);
+  color: var(--text-primary);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  span i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    cursor: pointer;
+  }
+}
+
+.info {
+  background: var(--info);
+  span i {
+    color: var(--white);
+  }
+}
+
+.error {
+  background: var(--error);
+  span i {
+    color: var(--white);
+  }
+}

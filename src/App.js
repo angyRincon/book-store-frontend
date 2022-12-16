@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+//@packages
+import React from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//@components
+import BookForm from "./components/organisms/book-form";
+import BookList from "./components/organisms/book-list";
+import BookDetail from "./components/organisms/book-detail";
+
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/books' element={<BookList />} />
+                <Route path='/book/:id' element={<BookDetail />} />
+                <Route path='/add-book' element={<BookForm />} />
+                <Route path='/edit-book/:id' element={<BookForm />} />
+            </Routes>
+        </BrowserRouter>
+    );
+};
 
 export default App;
