@@ -6,11 +6,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BookForm from "./components/organisms/book-form";
 import BookList from "./components/organisms/book-list";
 import BookDetail from "./components/organisms/book-detail";
+import Main from "./components/organisms/main";
 
 const App = () => {
     return (
         <BrowserRouter>
+
             <Routes>
+                <Route path='/' element={<Main />} />
                 <Route path='/books' element={<BookList />} />
                 <Route path='/book/:id' element={<BookDetail />} />
                 <Route path='/add-book' element={<BookForm />} />
