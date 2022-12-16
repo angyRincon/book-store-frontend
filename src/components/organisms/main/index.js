@@ -8,6 +8,7 @@ import CenteredContainer from "../../HOC/centered-container";
 
 const Main = () => {
     const navigate = useNavigate();
+
     return (
         <CenteredContainer>
             <Button handleClick={() => navigate('add-book')} label='Add book'/>
